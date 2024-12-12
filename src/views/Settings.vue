@@ -324,9 +324,10 @@ export default defineComponent({
             "shipmentMethodTypeId_op": "notEqual"
           },
           "filterByDate": 'Y',
+          "distinct": "Y",
           "entityName": "ProductStoreShipmentMethView",
           "fieldList": ["shipmentMethodTypeId", "description"],
-          "viewSize": 10
+          "viewSize": 20
         }) as any;
         if (!hasError(resp) && resp.data?.docs) {
           this.availableShipmentMethods = resp.data.docs;
